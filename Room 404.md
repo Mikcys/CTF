@@ -18,7 +18,7 @@ git clone "git dumper URL"
 cd git-dumper
 ls
 
-Install git-dumper
+Install git-dumper using github commands
 
 bash
 git-dumper ".git file" dir_name/
