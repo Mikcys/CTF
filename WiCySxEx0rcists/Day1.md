@@ -69,9 +69,10 @@ I then extracted the hidden file using:
 steghide extract -sf hello
 ```
 passphrase:taliban
-After extracting and reading the file, I recovered the **first half of the flag**.
 
 <img width="377" height="50" alt="image" src="https://github.com/user-attachments/assets/2c9f10a3-9726-4c7b-8725-bfbed8b622c8" />
+
+After extracting and reading the file, I recovered the **first half of the flag**.
 
 <img width="190" height="35" alt="image" src="https://github.com/user-attachments/assets/34415c12-9ec5-4b54-8657-179226feaf7f" />
 
