@@ -1,1 +1,9 @@
+## Challenge: A Picture Is Worth Two Fragments
+Two files, two fragments, one hidden truth. Looks can be deceiving, and the clues are hiding in places most people overlook.
+
+## Tools Used
+* binwalk
+* steghide
+* HexEd.it
+
 
