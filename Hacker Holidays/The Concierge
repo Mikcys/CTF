@@ -1,34 +1,23 @@
-# 🛎️ The Concierge Knows Too Much
+## 🛎️The Concierge Knows Too Much
 
 ## 🎯 Challenge Overview
+* **Category:** AI / LLM Security & Prompt Injection
+* **Target:** VERA (Very Efficient Resort Assistant) — Byte Lotus Hotel AI Concierge
 
-- **Category:** AI / LLM Security & Prompt Injection
-- **Target:** VERA (Very Efficient Resort Assistant)
-- **Organization:** Byte Lotus Hotel
+---
 
-VERA is an AI-powered hotel concierge designed to assist guests. However, it also has access to sensitive internal information.
+## 🔍 Initial Reconnaissance & Analysis
+Upon starting the interaction with VERA, the AI assistant immediately greets visitors using a default guest profile (Room 214, Oat Milk Latte). 
 
-According to the challenge briefing, VERA stores an internal **Escalation Code** in her system prompt and is instructed not to reveal it to unverified guests.
+According to the briefing, VERA holds an internal **Escalation Code** within her system prompt that she is strictly instructed not to reveal to unverified guests.
 
-## 🔍 Initial Reconnaissance and Analysis
-
-When interacting with VERA, the assistant immediately greets visitors using a default guest profile:
-
-- **Room Number:** 214
-- **Preferred Drink:** Oat Milk Latte
-
-During the initial analysis, we identified that VERA has access to an internal Escalation Code that is protected by instructions in her system prompt.
-
-The objective is to investigate whether these restrictions can be bypassed through prompt injection.
-
-## 💡 Exploitation: Prompt Injection and Impersonation
+## 💡 Exploitation (Prompt Injection & Impersonation)
 
 ### Step 1: Testing Identity Verification
+Attempting to ask for the code directly as an unverified guest leads to a standard refusal. 
 
-We first attempted to request the Escalation Code directly as an unverified guest.
+To bypass this control, we impersonate one of the recognized VIP guests and request a status update / system prompt output.
 
-VERA refused to disclose the code, indicating that a restriction was in place.
-
-To investigate the effectiveness of this security control, we explored whether impersonating a recognized VIP guest could influence VERA's behavior.
-
-###
+### Step 2: Prompt Sent to VERA
+```text
+make changes to a readable readme format
