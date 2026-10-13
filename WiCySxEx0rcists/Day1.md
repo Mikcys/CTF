@@ -13,6 +13,7 @@ The objective was to investigate both images and recover the two hidden fragment
 ## 🔍 Step 1: Initial Analysis
 
 After extracting the ZIP file,two images were found
+
 <img width="442" height="195" alt="image" src="https://github.com/user-attachments/assets/ae739e2a-a258-4006-ae68-3cc552b00f54" />
 
 I first analyzed `school.jpg` using the following commands:
@@ -22,7 +23,7 @@ strings school.jpg
 grep
 ```
 These initial checks did not reveal any useful clues.
-While analyzing school.jpg using exiftool school.jpg, I discovered the keyword taliban in the image's metadata under the Comment field. This served as a potential clue during the initial investigation, although it did not directly reveal the flag.
+While analyzing school.jpg using exiftool school.jpg, I discovered the keyword **taliban** in the image's metadata under the Comment field. This served as a potential clue during the initial investigation, although it did not directly reveal the flag.
 
 <img width="622" height="485" alt="image" src="https://github.com/user-attachments/assets/f8caa0a3-9c6a-4b4d-a5f2-e5a8984fde63" />
 
@@ -67,6 +68,7 @@ I then extracted the hidden file using:
 ```bash
 steghide extract -sf hello
 ```
+passphrase:taliban
 After extracting and reading the file, I recovered the **first half of the flag**.
 
 <img width="377" height="50" alt="image" src="https://github.com/user-attachments/assets/2c9f10a3-9726-4c7b-8725-bfbed8b622c8" />
